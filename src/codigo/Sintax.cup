@@ -1,0 +1,34 @@
+package codigo;
+
+import java_cup´.runtime.Symbol;
+
+parser code
+{:
+    private Symbol s;
+
+    public void syntax_error(Symbol s) {
+        this.s = s;
+    }
+
+    public Symbol getS() {
+        return this.s;
+    }
+:};
+
+terminal Parentesis_a,Parentesis_c,P_coma,
+    Identificador,Numero,If,True,False,DobleIgual, 
+    Menor, Mayor, Menor_Igual, Mayor_Igual,ERROR;
+
+non terminal S,I,C,O,V;
+
+start with S;
+
+S ::= S I | I;
+
+I ::= If Parentesis_a C Parentesis_c P_coma;
+
+C ::= Identificador O V;
+
+O ::= DobleIgual| Menor | Mayor | Menor_Igual | Mayor_Igual;
+
+V ::= Numero| True | False;
