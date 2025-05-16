@@ -29,7 +29,7 @@ public class Principal {
 
         Files.move(
             Paths.get("C:/Users/estev/OneDrive/Documentos/NetBeansProjects/Analizador/sym.java"),
-            Paths.get("C:/Users/estev/OneDrive/Documentos/NetBeansProjects/Analizador/src/codigo/Sym.java"),
+            Paths.get("C:/Users/estev/OneDrive/Documentos/NetBeansProjects/Analizador/src/codigo/sym.java"),
             StandardCopyOption.REPLACE_EXISTING
         );
 
